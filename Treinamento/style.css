@@ -99,9 +99,30 @@ b{
     padding: 20px;
     outline: var(--color-text) solid 1px;
     margin-top: 50px;
-    border-radius: 20px;
+    border-radius: 6px;
     background: var(--color-second);
+    height: 790px; /* Altura fixa para a área de rolagem */
+
+    overflow-y:auto; /* Barra de rolagem vertical */
 }
+
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.card::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.card::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.card::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
 
 .card ul{
     padding: 10px;
@@ -119,6 +140,12 @@ b{
 }
 .card ul li a:hover span{
     margin-left: 1rem;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .back-button {
