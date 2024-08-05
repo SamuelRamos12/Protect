@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+.progress-container {
+    width: 80%;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 30px;
+    width: 0;
+    background-color: #4caf50;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 25px;
+    transition: width 0.3s;
+}
+
+.course-details {
+    margin-top: 20px;
+}
+
+#lesson-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lesson-list li {
+    margin: 10px 0;
+}
