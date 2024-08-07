@@ -81,7 +81,7 @@ b{
     color: var(--color-dark);
 }
 
-.containerTreinamento{
+.container{
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 14rem auto 23rem;
@@ -146,7 +146,24 @@ b{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
+.titulo h2{
+    color: #0c9210;
+}
+
+.videos{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+.videos iframe{
+    padding: 20px;
+}
+
 
 .back-button {
     margin: 20px;
