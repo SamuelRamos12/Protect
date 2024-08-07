@@ -81,15 +81,16 @@ b{
     color: var(--color-dark);
 }
 
-.container{
+.containerConcluido{
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 14rem auto 23rem;
 }
+
 .back-btn{
     margin: 20px 30px;
 }
-.card{
+.card_concluido{
     margin-left: 10%;
     margin-bottom: 90px;
     width: 82%;
@@ -105,30 +106,30 @@ b{
     overflow-y:auto; /* Barra de rolagem vertical */
 }
 
-.card img{
+.card_concluido img{
     padding: 20px;
     margin-bottom: 50px;
 }
 
 /* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
-.card::-webkit-scrollbar {
+.card_concluido::-webkit-scrollbar {
     width: 12px; /* Largura da barra de rolagem */
 
 }
 
-.card::-webkit-scrollbar-track {
+.card_concluido::-webkit-scrollbar-track {
     background: #fffefe; /* Cor do trilho da barra de rolagem */
     border-radius: 20px;
     margin-left: 20px;
 }
 
-.card::-webkit-scrollbar-thumb {
+.card_concluido::-webkit-scrollbar-thumb {
     background: #bbbbb8; /* Cor do polegar da barra de rolagem */
     border-radius: 20px; /* Borda arredondada do polegar */
 }
 
 
-.card ul{
+.card_concluido ul{
     padding: 10px;
 }
 
@@ -139,10 +140,10 @@ b{
     margin-bottom: 20px;
 }
 
-.card ul li a:hover{
+.card_concluido ul li a:hover{
     color: var(--color-text);
 }
-.card ul li a:hover span{
+.cardcard_concluido ul li a:hover span{
     margin-left: 1rem;
 }
 
