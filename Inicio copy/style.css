@@ -226,6 +226,9 @@ font-size: 1.8rem;
 .modal-content {
     padding: 20px;
 }
+.modal-content h2{
+    color: #54a457;
+}
 
 .close {
     color: #aaa;
@@ -240,6 +243,66 @@ font-size: 1.8rem;
     text-decoration: none;
     cursor: pointer;
 }
+
+
+/* RECENTES INICIO*/
+.cards{
+    display:flex ;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    margin: 15px;
+    text-align: center;
+}
+.cards span{
+    color: #b3b3b3;
+    
+}
+.cards p{
+    color: #000000;
+}
+.cards button{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+    background-color:var(--color-text);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+    margin-left: 39%;
+    width: 100px;
+}
+.card1{
+    display:flex ;
+    flex-direction: column;
+    background: #d8d8d5;
+    border-radius: 15px;
+    padding: 20px;
+    width: 500px;
+    margin: 15px;
+}
+.card2{
+    display:flex ;
+    flex-direction: column;
+    background: #d8d8d5;
+    border-radius: 15px;
+    padding: 20px;
+    width: 500px;
+    margin: 15px;
+}
+.card3{
+    display:flex ;
+    flex-direction: column;
+    background: #d8d8d5;
+    border-radius: 15px;
+    padding: 20px;
+    width: 500px;
+    margin: 15px;
+}
+
+/* RECENTES FIM*/
 
 
 /* TREINAMENTO INICIO*/
@@ -294,7 +357,7 @@ font-size: 1.8rem;
     outline: var(--color-text) solid 1px;
     border-radius: 50px;
     margin-bottom: 20px;
-    background: #d8d8d5;;
+    background: #d8d8d5;
     
 }
 
@@ -321,28 +384,18 @@ font-size: 1.8rem;
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 14rem auto 23rem;
+    
 }
 .card_concluido{
-
-
-    margin-bottom: 90px;
-    width: 120%;
-    margin-right: 100%;
- 
-
-
-    background: #d8d8d5;;
-
+    position: relative;
+    right: 10%;
+    margin-right: 500px;
+    width: 122%;
     display: grid;
     grid-template-columns: repeat(3, 4fr);
-    align-items: center;
-
-
     margin-top: 50px;
     border-radius: 6px;
- 
     height: 790px; /* Altura fixa para a área de rolagem */
-
     
 }
 
@@ -368,43 +421,284 @@ font-size: 1.8rem;
     border-radius: 20px; /* Borda arredondada do polegar */
 }
 
+/* CONCLUIDO FIM*/
 
-.card_concluido ul{
+/* DSS INICIO*/
+
+.containerDSS{
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+    
+}
+.card_dss{
+    position: relative;
+    right: 10%;
+    margin-right: 500px;
+    width: 122%;
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    margin-top: 50px;
+    border-radius: 6px;
+    height: 790px; /* Altura fixa para a área de rolagem */
+    
+}
+.card_dss a{
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+}
+
+.card_dss img{
+    padding: 20px;
+    
+}
+
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.card_dss::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.card_dss::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.card_dss::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
+/* DSS FIM*/
+
+/* SETORES INICIO*/
+
+.containerSetores{
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+.back-btn{
+    margin: 20px 30px;
+}
+.cardSetores{
+    margin-left: 10%;
+    margin-bottom: 90px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-top: 50px;
+    border-radius: 6px;
+    background: var(--color-background);
+    height: 700px; /* Altura fixa para a área de rolagem */
+
+}
+
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.cardSetores::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.cardSetores::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.cardSetores::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
+
+.cardSetores ul{
     padding: 10px;
 }
 
-.card ul li{
-    padding: 10px;
+.cardSetores ul li{
+    padding: 15px 70px;
     outline: var(--color-text) solid 1px;
     border-radius: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
+    background: #d8d8d5;
+    text-align: center;
 }
 
-.card_concluido ul li a:hover{
+
+.cardSetores ul li a:hover{
     color: var(--color-text);
+    
 }
-.cardcard_concluido ul li a:hover span{
+.cardSetores ul li a:hover span{
     margin-left: 1rem;
 }
 
-.titulo{
+.cardSetores{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-}
-.titulo h2{
-    color: #0c9210;
 }
 
-.videos{
-    padding: 20px;
+/* SETORES FIM*/
+
+
+/* COLETA INICIO*/
+
+.containercoleta{
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+.back-btn{
+    margin: 20px 30px;
+}
+.cardcoleta{
+    margin-left: 10%;
+    margin-bottom: 90px;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    overflow-y: auto;
+    border-radius: 6px;
+    background: var(--color-background);
+    height: 700px; /* Altura fixa para a área de rolagem */
+
 }
-.videos iframe{
-    padding: 20px;
+
+.cardcoleta1{
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
 }
+
+.cardcoleta1 h3{
+    padding: 5px;
+}
+.cardcheck{
+    background: #bfbdbc;
+}
+.cardcheck p{
+    padding: 10px;
+    color: #000000;
+}
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.cardcoleta::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.cardcoleta::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.cardcoleta::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
+.cardcoleta ul li {
+    white-space: nowrap;
+    padding: 15px 80px;
+    outline: var(--color-text) solid 1px;
+    border-radius: 50px;
+    margin-bottom: 80px;
+    background: #d8d8d5;
+    margin-right: 300px;
+    text-align: center;
+    margin-top: -120px;
+}
+
+.cardcoleta ul li a:hover{
+    color: var(--color-text);
+    
+}
+.cardcoleta ul li a:hover span{
+    margin-left: 1rem;
+}
+
+.cardcoleta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Estilos para o container da checkbox */
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container p{
+    position: relative;
+    left: 250px;
+    top: 13px;
+    color: #000000;
+    white-space: nowrap;
+}
+
+
+/* Ocultar a checkbox padrão */
+.checkbox-container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Estilos para a checkmark */
+.checkmark {
+    position: absolute;
+    top: 10px;
+    left: 580px;
+    height: 25px;
+    width: 25px;
+    background-color: #b4b0ae;
+    border-radius: 5px;
+}
+
+/* Ao passar o mouse sobre a checkbox */
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* Quando a checkbox é selecionada */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #928e8c;
+}
+
+/* Estilos para o ícone de verificação dentro da checkbox */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Mostrar o ícone de verificação quando selecionado */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Estilo do ícone de verificação */
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* COLETA FIM*/
