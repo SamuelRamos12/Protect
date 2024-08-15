@@ -89,7 +89,7 @@
                                 <h3>Setores</h3>
                                 <p>Coleta de Materiais Recicláveis</p>
                                 <h2>CHECKLIST</h2>
-                                <button>Continuar</button>
+                                <button><a data-modal="modal-setores">Continuar</a></button>
                             </div>
                     </div>
                 </div>
@@ -209,7 +209,25 @@
                 <div class="modal-content">
                     <span class="close" data-modal="modal-jogos">&times;</span>
                     <h2>Jogos</h2>
-                    <p>Conteúdo dos Jogos...</p>
+                    <div class="containerjogos">
+                        <div class="card_jogos">
+                           
+                            <a href="/DSS/Jogo Acidente Zero.pdf" target="_blank">
+                                <img src="/DSS/jogo.png" alt="Clique para abrir o PDF" style="width: 300px; height: auto;">
+                                <h2>Tabuleiro</h2>
+                                <p>Clique para abrir o PDF</p>
+                            </a>
+                            <a href="/DSS/28062016_epi(1).pdf" target="_blank">
+                                <img src="/DSS/jogo7.png" alt="Clique para abrir o PDF" style="width: 300px; height: auto;">
+                                <h2>07 ERROS DE SEGURANÇA </h2>
+                            </a>
+                            <a href="/DSS/jogoinfo.pdf" target="_blank">
+                                <img src="/DSS/jogoinfo.png" alt="Clique para abrir o PDF" style="width: 300px; height: auto;">
+                                <h2>JOGO DA SEGURANÇA: UMA ATIVIDADE INTERATIVA</h2>
+                                <p>Clique para abrir o PDF</p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -278,21 +296,113 @@
                 </div>
             </div>
 
-            <div id="modal-outro" class="modal">
-                <div class="modal-content">
-                    <span class="close" data-modal="modal-outro">&times;</span>
-                    <p>Este é outro modal!</p>
-                </div>
-            </div>
+            <div id="modal-outro" class="modal">  
+                <div class="modal-content">  
+                    <span class="close" data-modal="modal-outro">&times;</span>  
+                    <div class="containerCheklist">
+
+                            <div class="cardchecklist">
+
+                                <ul>
+                                    <li>
+                                        <a href="#" class="open-modal" data-modal="modal-setores">Coleta de Materiais Recicláveis</a>
+                                    </li>
+                                </ul>
+
+                                <div class="headerCheklist">
+                                    
+                                    <h1 class="titleCheklist">Checklist de EPI's para a atividade:</h1>
+
+                                </div>
+
+                                <div class="checklist">
+
+                                    <div class="checklist-item">
+                                        <label for="calcado">Calçado de Segurança
+                                            <input type="checkbox" id="calcado" checked>
+                                            <span class="checkmark1"></span>
+                                        </label>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <label for="chapeu">Chapéu ou Boné (Tipo árabe)
+                                            <input type="checkbox" id="chapeu" checked>
+                                        <span class="checkmark1"></span>
+                                        </label>
+                                    </div>
+                                    <div class="checklist-item">
+                                        <label for="luva">Luva de segurança
+                                            <input type="checkbox" id="luva" checked>
+                                            <span class="checkmark1"></span>
+                                        </label>
+
+                                    </div>
+                                    <div class="checklist-item">
+                                        <label for="protetor">Protetor Solar
+                                            <input type="checkbox" id="protetor" checked>
+                                            <span class="checkmark1"></span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                    </div>
+                </div>  
+            </div>  
 
 
             <div id="modal-bonus" class="modal">
                 <div class="modal-content">
                     <span class="close" data-modal="modal-bonus">&times;</span>
                     <h2>Bónus</h2>
-                    <p>Conteúdo dos Bónus...</p>
+                    <div class="containerbonus">
+                        <div class="card_bonus">
+                            <a href="#" class="open-modal" data-modal="modal-vale">
+                                <span class="material-symbols-sharp">Redeem</span>
+                                <h3>VALE-PRESENTE</h3>
+                              </a>
+
+                              <a href="#" class="open-modal" data-modal="modal-reconhecimento">
+                                <span class="material-symbols-sharp">military_tech</span>
+                                <h3>RECONHECIMENTO</h3>
+                              </a>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div id="modal-vale" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-modal="modal-vale">&times;</span>
+                    <h2>VALE-PRESENTE</h2>
+                    <div class="containervale">
+                        <div class="card_vale">
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal-reconhecimento" class="modal">
+                <div class="modal-content">
+                    <span class="close" data-modal="modal-reconhecimento">&times;</span>
+                    <h2>RECONHECIMENTO</h2>
+                    <div class="containerreconhecimento">
+                        <div class="card_reconhecimento">
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
             <div id="modal-ranking" class="modal">
                 <div class="modal-content">
                     <span class="close" data-modal="modal-ranking">&times;</span>

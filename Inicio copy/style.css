@@ -473,6 +473,58 @@ font-size: 1.8rem;
 
 /* DSS FIM*/
 
+
+/* JOGOS INICIO*/
+
+.containerjogos{
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+    
+}
+.card_jogos{
+    position: relative;
+    right: 10%;
+    margin-right: 500px;
+    width: 122%;
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    margin-top: 50px;
+    border-radius: 6px;
+    height: 790px; /* Altura fixa para a área de rolagem */
+    
+}
+.card_jogos a{
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+}
+
+.card_jogos img{
+    padding: 20px;
+    
+}
+
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.card_jogos::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.card_jogos::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.card_jogos::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
+/* JOGOS FIM*/
+
+
 /* SETORES INICIO*/
 
 .containerSetores{
@@ -701,4 +753,196 @@ font-size: 1.8rem;
     transform: rotate(45deg);
 }
 
+
+
+
+
+
+
+
+
+.containerCheklist {
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+.cardchecklist{
+    margin-left: 10%;
+    margin-bottom: 90px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    background: var(--color-background);
+    height: 700px; /* Altura fixa para a área de rolagem */
+
+}
+
+.cardchecklist ul li {
+    white-space: nowrap;
+    padding: 15px 80px;
+    outline: var(--color-text) solid 1px;
+    border-radius: 50px;
+    margin-bottom: 80px;
+    background: #d8d8d5;
+    margin-right: 300px;
+    text-align: center;
+}
+
+.cardchecklist ul li a:hover{
+    color: var(--color-text);
+    
+}
+.cardchecklist ul li a:hover span{
+    margin-left: 1rem;
+}
+
+.headerCheklist {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+background: #54A457;
+border-radius: 15px;
+}
+
+.titleCheklist {
+font-size: 24px;
+font-weight: bold;
+}
+
+.checklist {
+margin-right: 150px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+
+padding: 10px;
+border-radius: 5px;
+}
+
+.checklist-item {
+display: flex;
+align-items: center;
+}
+
+.checklist-item input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checklist-item label {
+font-size: 16px;
+}
+
+
+
+/* Ocultar a checkbox padrão */
+.checklist-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Estilos para a checkmark */
+.checkmark1 {
+    position: absolute;
+    left: 580px;
+    height: 25px;
+    width: 25px;
+    background-color: #b4b0ae;
+    border-radius: 5px;
+}
+
+/* Ao passar o mouse sobre a checkbox */
+.checklist-item:hover input ~ .checkmark1 {
+    background-color: #ccc;
+}
+
+/* Quando a checkbox é selecionada */
+.checklist-item input:checked ~ .checkmark1 {
+    background-color: #928e8c;
+}
+
+/* Estilos para o ícone de verificação dentro da checkbox */
+.checkmark1:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Mostrar o ícone de verificação quando selecionado */
+.checklist-item input:checked ~ .checkmark1:after {
+    display: block;
+}
+
+/* Estilo do ícone de verificação */
+.checklist-item .checkmark1:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #13ab25;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
 /* COLETA FIM*/
+
+
+
+/* bonus INICIO*/
+
+.containerbonus{
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+    
+}
+.card_bonus{
+    position: relative;
+    right: 10%;
+    margin-right: 500px;
+    width: 122%;
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    margin-top: 50px;
+    border-radius: 6px;
+    height: 790px; /* Altura fixa para a área de rolagem */
+    
+}
+.card_bonus a{
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+}
+
+.card_bonus img{
+    padding: 20px;
+    
+}
+
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.card_bonus::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.card_bonus::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.card_bonus::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
+/* bonus FIM*/
