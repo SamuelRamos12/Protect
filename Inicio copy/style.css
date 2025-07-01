@@ -917,10 +917,27 @@ font-size: 16px;
     height: 790px; /* Altura fixa para a área de rolagem */
     
 }
+/* Aplica estilo ao h3 e ao span DENTRO do h3 na .card_bonus */
+.card_bonus span {
+    color: #13ab25;
+    transition: color 0.3s ease;
+}
+.card_bonus h3 {
+    color: #13ab25;
+    transition: color 0.3s ease;
+}
+
+/* Muda a cor e o tamanho do span quando ele for "hovered" */
+.card_bonus span:hover {
+    color: #1c5222;
+    font-size: 40px; /* Ajuste o tamanho conforme necessário */
+}
+
 .card_bonus a{
    display: flex;
    text-align: center;
    flex-direction: column;
+   height: 5px;
 }
 
 .card_bonus img{

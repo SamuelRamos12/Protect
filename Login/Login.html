@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleLogin.css">
     <title>Login</title>
 </head>
 <body>
     <div class="container">
         <img src="/Imagens/Logo.png" height="300px">
         <div class="form">
+            <form action="login.php" method="POST"> <!-- Direcionando para login.php -->
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="username"><img src="/Imagens/username.png" height="50px "></label>
+                        <label for="username"><img src="/Imagens/username.png" height="50px"></label>
                         <input id="username" type="text" name="username" placeholder="Digite seu nome" required>
                     </div>
 
@@ -27,16 +28,15 @@
                     </div>
                 </div>
                 <div class="continue-button">
-                    <button><a href="#">Entrar</a> </button>
+                    <button type="submit">Entrar</button>
                     <div class="recuperar">
-                        <a href="">Esqueceu sua senha?</a>
+                        <a href="#">Esqueceu sua senha?</a>
                     </div>
                     <button><a href="#">Cadastre-se</a></button>
+                    
                 </div>
-                <p>Protecwork.com</p>
             </form>
         </div>
     </div>
 </body>
-
 </html>
