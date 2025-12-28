@@ -1,0 +1,965 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-primary: #E5E5E3;
+    --color-second: #d8d8d5;
+    --color-text: #54A457;
+    --color-text2: #054B07;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #111e88;
+    --color-light-variant: #677483;
+    --color-background: #E5E5E3;
+  
+    --card-border-radius: 2rem;
+    --border-radius-1: 2rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+  
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+  
+    --box-shadow: 0 2rem 3rem var(--color-light);
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto;
+}
+
+a{
+    color: var(--color-dark);
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.8rem;
+}
+h4{
+    font-size: 0.8rem;
+}
+h5{
+
+    font-size: 0.77rem;
+}
+small{
+    font-size: 0.75rem;
+}
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted{
+    color: var(--color-info-dark);
+}
+p{
+    color: var(--color-dark-variant);
+}
+b{
+    color: var(--color-dark);
+}
+.primary{
+    color:var(--color-primary) ;
+}
+.danger{
+    color:var(--color-text) ;
+}
+.success{
+    color:var(--color-success) ;
+}
+.warning{
+    color:var(--color-warning) ;
+}
+
+aside{
+    height: 100vh;
+}
+aside .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+aside .logo{
+    display: flex;
+    gap: 0.8rem;
+}
+aside .logo img{
+    width: 4rem;
+    height: 4rem;
+}
+aside .close{
+    display: none;
+}
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+aside h3{
+    font-weight: 500;
+}
+aside .sidebar a{
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+aside .sidebar a:hover{
+    color: var(--color-text);
+}
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+}
+
+footer{
+    width: 100%;
+    color: #000000;
+}
+
+/* FOOTER INICIO*/
+
+#footer_content{
+    background-color:var(--color-second);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1{
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer_social_media .footer-link{
+    align-items: center;
+    color: #FF1457;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#footer_social_media .footer-link i{
+font-size: 1.8rem;
+}
+
+/* FOOTER FIM*/
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    height: 70%;
+    width: 90%;
+    max-width: 800px;
+    margin: 1rem;
+}
+
+.modal-content {
+    padding: 20px;
+}
+.modal-content h2{
+    color: #54a457;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* RECENTES INICIO*/
+.cards{
+    display:flex ;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    margin: 15px;
+    text-align: center;
+}
+.cards span{
+    color: #b3b3b3;
+    
+}
+.cards p{
+    color: #000000;
+}
+.cards button{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 5px 20px;
+    cursor: pointer;
+    background-color:var(--color-text);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+    margin-left: 39%;
+    width: 100px;
+}
+.card1{
+    display:flex ;
+    flex-direction: column;
+    background: #d8d8d5;
+    border-radius: 15px;
+    padding: 20px;
+    width: 500px;
+    margin: 15px;
+}
+.card2{
+    display:flex ;
+    flex-direction: column;
+    background: #d8d8d5;
+    border-radius: 15px;
+    padding: 20px;
+    width: 500px;
+    margin: 15px;
+}
+.card3{
+    display:flex ;
+    flex-direction: column;
+    background: #d8d8d5;
+    border-radius: 15px;
+    padding: 20px;
+    width: 500px;
+    margin: 15px;
+}
+
+/* RECENTES FIM*/
+
+
+/* TREINAMENTO INICIO*/
+
+.containerTreinamento{
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+.back-btn{
+    margin: 20px 30px;
+}
+.card{
+    margin-left: 10%;
+    margin-bottom: 90px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-top: 50px;
+    border-radius: 6px;
+    background: var(--color-background);
+    height: 700px; /* Altura fixa para a área de rolagem */
+
+}
+
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.card::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.card::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.card::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
+
+.card ul{
+    padding: 10px;
+}
+
+.card ul li{
+    padding: 10px;
+    outline: var(--color-text) solid 1px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    background: #d8d8d5;
+    
+}
+
+
+.card ul li a:hover{
+    color: var(--color-text);
+    
+}
+.card ul li a:hover span{
+    margin-left: 1rem;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TREINAMENTO FIM*/
+
+/* CONCLUIDO INICIO*/
+
+.containerConcluido{
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+    
+}
+.card_concluido{
+    position: relative;
+    right: 10%;
+    margin-right: 500px;
+    width: 122%;
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    margin-top: 50px;
+    border-radius: 6px;
+    height: 790px; /* Altura fixa para a área de rolagem */
+    
+}
+
+.card_concluido img{
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.card_concluido::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.card_concluido::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.card_concluido::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
+/* CONCLUIDO FIM*/
+
+/* DSS INICIO*/
+
+.containerDSS{
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+    
+}
+.card_dss{
+    position: relative;
+    right: 10%;
+    margin-right: 500px;
+    width: 122%;
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    margin-top: 50px;
+    border-radius: 6px;
+    height: 790px; /* Altura fixa para a área de rolagem */
+    
+}
+.card_dss a{
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+}
+
+.card_dss img{
+    padding: 20px;
+    
+}
+
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.card_dss::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.card_dss::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.card_dss::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
+/* DSS FIM*/
+
+
+/* JOGOS INICIO*/
+
+.containerjogos{
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+    
+}
+.card_jogos{
+    position: relative;
+    right: 10%;
+    margin-right: 500px;
+    width: 122%;
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    margin-top: 50px;
+    border-radius: 6px;
+    height: 790px; /* Altura fixa para a área de rolagem */
+    
+}
+.card_jogos a{
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+}
+
+.card_jogos img{
+    padding: 20px;
+    
+}
+
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.card_jogos::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.card_jogos::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.card_jogos::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
+/* JOGOS FIM*/
+
+
+/* SETORES INICIO*/
+
+.containerSetores{
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+.back-btn{
+    margin: 20px 30px;
+}
+.cardSetores{
+    margin-left: 10%;
+    margin-bottom: 90px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-top: 50px;
+    border-radius: 6px;
+    background: var(--color-background);
+    height: 700px; /* Altura fixa para a área de rolagem */
+
+}
+
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.cardSetores::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.cardSetores::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.cardSetores::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
+
+.cardSetores ul{
+    padding: 10px;
+}
+
+.cardSetores ul li{
+    padding: 15px 70px;
+    outline: var(--color-text) solid 1px;
+    border-radius: 50px;
+    margin-bottom: 80px;
+    background: #d8d8d5;
+    text-align: center;
+}
+
+
+.cardSetores ul li a:hover{
+    color: var(--color-text);
+    
+}
+.cardSetores ul li a:hover span{
+    margin-left: 1rem;
+}
+
+.cardSetores{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SETORES FIM*/
+
+
+/* COLETA INICIO*/
+
+.containercoleta{
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+.back-btn{
+    margin: 20px 30px;
+}
+.cardcoleta{
+    margin-left: 10%;
+    margin-bottom: 90px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    background: var(--color-background);
+    height: 700px; /* Altura fixa para a área de rolagem */
+
+}
+
+.cardcoleta1{
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+}
+
+.cardcoleta1 h3{
+    padding: 5px;
+}
+.cardcheck{
+    background: #bfbdbc;
+}
+.cardcheck p{
+    padding: 10px;
+    color: #000000;
+}
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.cardcoleta::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.cardcoleta::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.cardcoleta::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
+.cardcoleta ul li {
+    white-space: nowrap;
+    padding: 15px 80px;
+    outline: var(--color-text) solid 1px;
+    border-radius: 50px;
+    margin-bottom: 80px;
+    background: #d8d8d5;
+    margin-right: 300px;
+    text-align: center;
+    margin-top: -120px;
+}
+
+.cardcoleta ul li a:hover{
+    color: var(--color-text);
+    
+}
+.cardcoleta ul li a:hover span{
+    margin-left: 1rem;
+}
+
+.cardcoleta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Estilos para o container da checkbox */
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-container p{
+    position: relative;
+    left: 250px;
+    top: 13px;
+    color: #000000;
+    white-space: nowrap;
+}
+
+
+/* Ocultar a checkbox padrão */
+.checkbox-container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Estilos para a checkmark */
+.checkmark {
+    position: absolute;
+    top: 10px;
+    left: 580px;
+    height: 25px;
+    width: 25px;
+    background-color: #b4b0ae;
+    border-radius: 5px;
+}
+
+/* Ao passar o mouse sobre a checkbox */
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* Quando a checkbox é selecionada */
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #928e8c;
+}
+
+/* Estilos para o ícone de verificação dentro da checkbox */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Mostrar o ícone de verificação quando selecionado */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Estilo do ícone de verificação */
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
+
+
+
+
+
+
+
+.containerCheklist {
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+.cardchecklist{
+    margin-left: 10%;
+    margin-bottom: 90px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    background: var(--color-background);
+    height: 700px; /* Altura fixa para a área de rolagem */
+
+}
+
+.cardchecklist ul li {
+    white-space: nowrap;
+    padding: 15px 80px;
+    outline: var(--color-text) solid 1px;
+    border-radius: 50px;
+    margin-bottom: 80px;
+    background: #d8d8d5;
+    margin-right: 300px;
+    text-align: center;
+}
+
+.cardchecklist ul li a:hover{
+    color: var(--color-text);
+    
+}
+.cardchecklist ul li a:hover span{
+    margin-left: 1rem;
+}
+
+.headerCheklist {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+background: #54A457;
+border-radius: 15px;
+}
+
+.titleCheklist {
+font-size: 24px;
+font-weight: bold;
+}
+
+.checklist {
+margin-right: 150px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+
+padding: 10px;
+border-radius: 5px;
+}
+
+.checklist-item {
+display: flex;
+align-items: center;
+}
+
+.checklist-item input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checklist-item label {
+font-size: 16px;
+}
+
+
+
+/* Ocultar a checkbox padrão */
+.checklist-item input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Estilos para a checkmark */
+.checkmark1 {
+    position: absolute;
+    left: 580px;
+    height: 25px;
+    width: 25px;
+    background-color: #b4b0ae;
+    border-radius: 5px;
+}
+
+/* Ao passar o mouse sobre a checkbox */
+.checklist-item:hover input ~ .checkmark1 {
+    background-color: #ccc;
+}
+
+/* Quando a checkbox é selecionada */
+.checklist-item input:checked ~ .checkmark1 {
+    background-color: #928e8c;
+}
+
+/* Estilos para o ícone de verificação dentro da checkbox */
+.checkmark1:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Mostrar o ícone de verificação quando selecionado */
+.checklist-item input:checked ~ .checkmark1:after {
+    display: block;
+}
+
+/* Estilo do ícone de verificação */
+.checklist-item .checkmark1:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #13ab25;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+/* COLETA FIM*/
+
+
+
+/* bonus INICIO*/
+
+.containerbonus{
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+    
+}
+.card_bonus{
+    position: relative;
+    right: 10%;
+    margin-right: 500px;
+    width: 122%;
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    margin-top: 50px;
+    border-radius: 6px;
+    height: 790px; /* Altura fixa para a área de rolagem */
+    
+}
+/* Aplica estilo ao h3 e ao span DENTRO do h3 na .card_bonus */
+.card_bonus span {
+    color: #13ab25;
+    transition: color 0.3s ease;
+}
+.card_bonus h3 {
+    color: #13ab25;
+    transition: color 0.3s ease;
+}
+
+/* Muda a cor e o tamanho do span quando ele for "hovered" */
+.card_bonus span:hover {
+    color: #1c5222;
+    font-size: 40px; /* Ajuste o tamanho conforme necessário */
+}
+
+.card_bonus a{
+   display: flex;
+   text-align: center;
+   flex-direction: column;
+   height: 5px;
+}
+
+.card_bonus img{
+    padding: 20px;
+    
+}
+
+/* Customização da barra de rolagem para navegadores Webkit (Chrome, Safari) */
+.card_bonus::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+
+}
+
+.card_bonus::-webkit-scrollbar-track {
+    background: #fffefe; /* Cor do trilho da barra de rolagem */
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.card_bonus::-webkit-scrollbar-thumb {
+    background: #bbbbb8; /* Cor do polegar da barra de rolagem */
+    border-radius: 20px; /* Borda arredondada do polegar */
+}
+
+/* bonus FIM*/
